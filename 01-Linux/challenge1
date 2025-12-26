@@ -31,6 +31,7 @@ done
 $ mkdir test
 $ touch test/a.txt test/b.txt test/c.pdf
 $ ./file-organizer.sh test
+output:
 Organized 1 .pdf files
 Organized 2 .txt files
 
