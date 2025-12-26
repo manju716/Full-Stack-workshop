@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Check arguments
+if [ $# -lt 2 ]; then
+  echo "Usage: $0 <source_dir> <backup_dest>"
+  exit 1
+fi
+
+SOURCE_DIR="$1"
+BACKUP_DIR="$2"
+
+# Check if source exists
+if [ ! -d "$SOURCE_DIR" ]; then
+  echo "Error: Source directory does not exist"
+  exit 1
+fi
+
+# Create backup destination if not exists
+mkdir -p "$BACKUP_DIR"
+TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
+BACKUP_FILE="backup-$TIMESTAMP.tar.gz"
+BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
+
+# Create compressed backup
+tar -czf "$BACKUP_PATH" -C "$(dirname "$SOURCE_DIR")" "$(basename "$SOURCE_DIR")"
+
+# Check if backup was successful
+if [ $? -ne 0 ]; then
+  echo "Backup failed"
+  exit 1
+fi
+
+# Print backup size
+BACKUP_SIZE=$(du -h "$BACKUP_PATH" | cut -f1)
+echo "Backup created: $BACKUP_FILE"
+echo "Backup size: $BACKUP_SIZE"
+
+# Keep only last 5 backups
+cd "$BACKUP_DIR" || exit
+ls -1t backup-*.tar.gz | tail -n +6 | xargs -r rm --
+
+exit 0
+
+
+--------------------------------Output-------------------------------------
+$ ./backup.sh /c/Users/Manja/Document /c/Users/Manja/backups
+Backup created: backup-20251227-003139.tar.gz
+Backup size: 4.0K
+
+
+
+
