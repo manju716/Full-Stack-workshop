@@ -1,0 +1,37 @@
+
+body{
+    background: #FBC5C5;
+}
+main{
+   h1{
+    text-align: center;
+   }
+}
+nav{
+    background-color:#D4D4D8;
+    padding: 1em;
+    text-align: right;
+    border-style: groove;
+    border-color: black;
+    a{
+        margin-right: 30px;
+    }
+}
+section 
+{
+    img {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    animation: fadeIn 7s;
+}
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
