@@ -66,7 +66,7 @@ confirmPassword.onblur = function () {
   checkForm();
 };
 
-// Enable submit only if all valid
+// if valid it will enable
 function checkForm() {
   if (
     username.classList.contains("valid") &&
@@ -83,7 +83,7 @@ function checkForm() {
 }
 
 
-// Prevent submission if invalid
+// if invalid it prevent register
 document.getElementById("form").onsubmit = function (e) {
   if (submitBtn.disabled) {
     e.preventDefault();
