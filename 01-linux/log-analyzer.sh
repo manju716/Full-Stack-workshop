@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 file="C:\Users\Manja\devtraining\log_analysis\logfile.txt"
 
 # Check if file exists
