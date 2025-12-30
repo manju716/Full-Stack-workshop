@@ -1,27 +1,52 @@
 let count = 0;
+let step = 1;
 
-let display = document.getElementById("count");
+const countDisplay = document.getElementById("count");
+const incrementBtn = document.getElementById("increment");
+const decrementBtn = document.getElementById("decrement");
+const resetBtn = document.getElementById("reset");
+const stepButtons = document.querySelectorAll(".step-btn");
 
-document.getElementById("plus").onclick = function () {
-  count++;
-  display.innerText = count;
-  display.style.color = "green";
-};
+// Update display and color
+function updateDisplay() {
+  countDisplay.textContent = count;
 
-document.getElementById("minus").onclick = function () {
   if (count > 0) {
-    count--;
-    display.style.color = "red";
+    countDisplay.style.color = "green";
+  } else if (count < 0) {
+    countDisplay.style.color = "red";
+  } else {
+    countDisplay.style.color = "black";
   }
-  display.innerText = count;
+}
 
-  if (count === 0) {
-    display.style.color = "black";
+// Increment
+incrementBtn.addEventListener("click", () => {
+  count += step;
+  updateDisplay();
+});
+
+// Decrement 
+decrementBtn.addEventListener("click", () => {
+  count -= step;
+  if (count < 0) {
+    count = 0;
   }
-};
+  updateDisplay();
+});
 
-document.getElementById("reset").onclick = function () {
+// Reset
+resetBtn.addEventListener("click", () => {
   count = 0;
-  display.innerText = count;
-  display.style.color = "black";
-};
+  updateDisplay();
+});
+
+// Step selection
+stepButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    step = Number(button.getAttribute("data-step"));
+
+    stepButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+  });
+});
