@@ -41,7 +41,7 @@ resetBtn.addEventListener("click", () => {
   updateDisplay();
 });
 
-// Step selection
+// Step 
 stepButtons.forEach(button => {
   button.addEventListener("click", () => {
     step = Number(button.getAttribute("data-step"));
