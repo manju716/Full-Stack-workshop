@@ -1,7 +1,7 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-30 15:38
+**Review Date:** 2025-12-31 09:44
 
 ---
 
@@ -13,14 +13,14 @@
 
 📄 **counter.html**
    Path: `06-javascript/challenges/challenge01-iterative counter/counter.html`
-   Lines: 69
+   Lines: 75
 
     - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
-    - ❌ Missing viewport meta tag
+    - ✅ Uses semantic HTML5 tags
+    - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
-   **Score: 3/5**
+   **Score: 5/5**
 
 📄 **counter.js**
    Path: `06-javascript/challenges/challenge01-iterative counter/counter.js`
@@ -69,7 +69,7 @@
 
    **Score: 3/5**
 
-### Topic Score: 18 / 25 (72%)
+### Topic Score: 20 / 25 (80%)
 
 ---
 
