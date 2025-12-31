@@ -1,40 +1,27 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-31 09:44
+**Review Date:** 2025-12-31 10:59
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 3
+**Files submitted:** 2
 
-### Code Review
+### Relevance Check
 
-📄 **department-stats.sql**
-   Path: `09-mysql/department-stats.sql`
-   Lines: 6
+❌ **Submission does NOT match exercise requirements**
+   Expected keywords: customer product category order ecommerce schema queries
+   None of the expected keywords found in submission
+   **Please review the exercise requirements and resubmit**
 
-    - ✅ Contains 1 SELECT statement(s)
-    - 💡 Consider using JOINs for related data
-    - ✅ Uses aggregate functions
-    - ✅ Uses GROUP BY for aggregation
-    - ✅ Uses explicit column selection
+### ⚠️ Review Skipped
 
-   **Score: 4/5**
+The submission does not appear to match the exercise requirements.
+Please complete the correct exercise and resubmit.
 
-📄 **employee-hierarchy.sql**
-   Path: `09-mysql/employee-hierarchy.sql`
-   Lines: 3
-
-    - ✅ Contains 1 SELECT statement(s)
-    - ✅ Uses JOIN operations
-    - 💡 Consider using aggregate functions (COUNT, SUM, etc.)
-    - ✅ Uses explicit column selection
-
-   **Score: 3/5**
-
-### Topic Score: 7 / 10 (70%)
+### Topic Score: 0 / 100 (0%)
 
 ---
 
@@ -42,7 +29,7 @@
 
 **Status:** ⚠️ Not submitted
 
-Submit to: `09-mysql/challenge-01/`
+Submit to: `09-mysql/challenges/`
 
 ---
 
