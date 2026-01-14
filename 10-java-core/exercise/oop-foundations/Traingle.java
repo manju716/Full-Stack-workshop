@@ -1,6 +1,6 @@
 package Person;
 
-public class Triangle extends Shape {
+public class Traingle extends Shape {
 
     double base, height;
     double side1, side2, side3;
@@ -22,4 +22,5 @@ public class Triangle extends Shape {
         return side1 + side2 + side3;
     }
 }
+
 
